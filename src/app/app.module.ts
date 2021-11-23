@@ -5,11 +5,13 @@ import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { MainPageComponent } from './Pages/main-page/main-page.component';
+import { ButtonComponent } from './Components/Shared/button/button.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    MainPageComponent
+    MainPageComponent,
+    ButtonComponent,
   ],
   imports: [
     BrowserModule,
