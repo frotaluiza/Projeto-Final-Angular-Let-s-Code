@@ -1,0 +1,30 @@
+.body{
+    height: 100%;
+    background-color: #141414;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+    color: #E4E4E4;
+    font-size: 30px;
+    padding: 0px 15px 0px 15px;
+}
+
+.select-title{
+    margin-top: 50px;
+    font-weight: 400;
+}
+
+.users-cards{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+@media only screen and (max-width: 435px){
+    .body{
+        height: auto;
+        padding-top: 30px;
+    }
+}
