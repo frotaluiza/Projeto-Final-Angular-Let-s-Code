@@ -1,0 +1,6 @@
+<section class="card-body" *ngIf="user != null">
+    <article class="card-user">
+        <img class="user-avatar" [src]="user.avatarUrl">
+    </article>
+    <span class="card-user-name">{{ user.name | titlecase }}</span>
+</section>
