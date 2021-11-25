@@ -26,7 +26,7 @@ export class ApiNetflixService {
     return this.http.get<UserChosen>(`${this.urlApi}/users/${userId}`)
   }
 
-  getShow(showId: string): Observable<ShowInformation>{
+  getShow(showId: number): Observable<ShowInformation>{
     return this.http.get<ShowInformation>(`${this.urlApi}/series/${showId}`)
   }
 }
