@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import { UserChosen } from 'src/app/Services/endpoints-results';
 
 @Component({
   selector: 'app-main-page',
@@ -6,10 +7,15 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./main-page.component.scss']
 })
 export class MainPageComponent implements OnInit {
+  @Input() userInfo: UserChosen = {
+    popular: [],
+    keepWatching: []
+  };
 
   constructor() { }
 
   ngOnInit(): void {
+    console.log(this.userInfo.keepWatching)
   }
 
 }

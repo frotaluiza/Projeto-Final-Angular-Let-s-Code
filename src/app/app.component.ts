@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { UserChosen } from './Services/endpoints-results';
 
 @Component({
   selector: 'app-root',
