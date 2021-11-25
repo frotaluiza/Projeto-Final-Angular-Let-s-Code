@@ -1,0 +1,37 @@
+<ng-container *ngIf="show">
+    <div class="modalc" (mousedown)="closeModal($event)" #myModal>
+        <div class="modalcContent">
+            <div class="modalcHeader">
+                <div (click)="hideModal()" class="closeButtonContainer">
+                    <button type="button" class="closeButton" aria-label="Close"> X </button>
+                </div>
+                <div class="imageContainer">
+                    <img class="movieImage" src="./assets/movie-image.png">
+                </div>
+                <div class="movieTittleContainer">
+                    <p>ALERTA VERMELHO</p>
+                </div>
+                <div class="watchButtonContainer">
+                    <button class="watchButton">Assistir</button>
+                </div>
+            </div>
+            <section class="leftDescriptionElements">
+                <div class="movieInformation">
+                    <h4 class="relavanceText">99% Relevante</h4>
+                    <p class="yearOfTheMovie">2021</p>
+                    <p class="ageClassification">12</p>
+                    <h4 class="durationOfTheMovie">1h57min</h4>
+                </div>
+                <div class="movieDescription">
+                    <p>Um agente do FBI persegue o ladrão de arte mais procurado do mundo. Ele só não esperava ter seu alvo como parceiro para prender uma bandida muito esperta.</p>
+                </div>
+            </section>
+            <section class="rightDescriptionElements">
+                <p><span class="descriptionSpan">Elenco: </span>Dwayne Johnson, Ryan Reynolds, Gal Gadot, mais</p>
+                <p><span class="descriptionSpan">Gêneros: </span>Ação e aventura, Comédia, Policiais</p>
+                <p><span class="descriptionSpan">Cenas e momentos: </span>Irreverentes, empolgantes</p>
+            </section>
+        </div>
+    </div>
+</ng-container>
+
