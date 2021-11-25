@@ -15,7 +15,6 @@ export class MainPageComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
-    console.log(this.userInfo.keepWatching)
   }
 
 }
