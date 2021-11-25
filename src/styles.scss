@@ -2,5 +2,10 @@
 @import '~bootstrap/dist/css/bootstrap.min.css';
 *{
     font-family: 'Martel Sans', sans-serif;
+    margin: 0;
+}
+
+html, body{
+    height: 100%;
 }
 
