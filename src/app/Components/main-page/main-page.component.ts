@@ -1,6 +1,6 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { ApiNetflixService } from 'src/app/Services/api-netflix.service';
-import { LoginUserInformation, UserChosen } from 'src/app/Services/endpoints-results';
+import { UserChosen } from 'src/app/Services/endpoints-results';
 
 @Component({
   selector: 'app-main-page',
@@ -8,11 +8,7 @@ import { LoginUserInformation, UserChosen } from 'src/app/Services/endpoints-res
   styleUrls: ['./main-page.component.scss']
 })
 export class MainPageComponent implements OnInit {
-  @Input() userInfo: LoginUserInformation = {
-    id: 0,
-    name: '',
-    avatarUrl: ''
-  };
+  userInfo: number = 0;
 
   userData: UserChosen = {
     popular: [],
@@ -20,12 +16,14 @@ export class MainPageComponent implements OnInit {
   };
 
   constructor(private apiRequest: ApiNetflixService) {
-    apiRequest.getUserChosen(this.userInfo.id).subscribe(x => 
-      this.userData = x  
-    )
   }
 
   ngOnInit(): void {
+    this.userInfo = history.state.navigationId;
+
+    this.apiRequest.getUserChosen(this.userInfo).subscribe(x => 
+      this.userData = x
+    )
   }
 
 }
