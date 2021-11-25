@@ -1,0 +1,20 @@
+.navbar{
+    width: 100%;
+}
+
+.netflixf-Logo {
+    fill: #e50914;
+    line-height: normal;
+    height: 45px;
+    width: 167px;
+    padding: 30px 0 0 80px;
+    position: absolute;
+}
+
+@media only screen and (max-width: 720px){
+    .netflixf-Logo {
+        width: 6.75rem;
+        height: 2rem;
+        padding: 30px 0 0 30px;
+    }
+}
