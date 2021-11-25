@@ -1,6 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { ShowInformation } from 'src/app/Services/endpoints-results';
-import { ServiceService } from 'src/app/Services/service.service';
+import { ApiNetflixService } from 'src/app/Services/api-netflix.service';
 
 @Component({
   selector: 'app-movie-card',
@@ -12,10 +11,10 @@ export class MovieCardComponent implements OnInit {
 
   cardImage: string = "";
 
-  constructor(private serviceService: ServiceService) { }
+  constructor(private serviceService: ApiNetflixService) { }
 
   ngOnInit(): void {
-    this.serviceService.ShowSeriesInfo(this.id).subscribe(x =>{  
+    this.serviceService.getShow(this.id).subscribe(x =>{  
       this.cardImage = x.cardImage;    
     })
   }
