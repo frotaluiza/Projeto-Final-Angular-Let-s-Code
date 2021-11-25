@@ -1,9 +1,12 @@
-<simple-navbar></simple-navbar>
 <section class="body">
-    <article class="select-infos">
-        <h1 class="select-title">Quem está assistindo?</h1>
-        <article class="users-cards" >
-            <user-card *ngFor="let user of usersSelection" [user]="user" (click)="sendUserToMain(user)"></user-card>
+    <simple-navbar></simple-navbar>
+    <div class="skeleton-selection">
+        <article class="select-infos" *ngIf="usersSelection.length > 0">
+            <h1 class="select-title">Quem está assistindo?</h1>
+            <article class="users-cards" >
+                <user-card *ngFor="let user of usersSelection" [user]="user" (click)="sendUserToMain(user)"></user-card>
+            </article>
         </article>
-    </article>
+    </div>
+    <netflix-loader *ngIf="usersSelection.length < 1"></netflix-loader>
 </section>
