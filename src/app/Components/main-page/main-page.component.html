@@ -1,8 +1,8 @@
 <div class="main">
   <div class="main-movie">
-    <img class="img-main" src="../../../assets/main-page/red-notice.png"/>
+    <img class="img-main" src="../../../assets/main-page/red-notice.png" />
     <div class="movie-data">
-      <img class="movie-secondary" src="../../../assets/main-page/movie-title.png"/>
+      <img class="movie-secondary" src="../../../assets/main-page/movie-title.png" />
 
       <div class="movie-ranking">
         <div class="top">
@@ -13,13 +13,35 @@
       </div>
 
       <span>
-        Um agente do FBI persegue o ladrão de arte mais procurado do mundo. Ele só não esperava ter seu alvo como parceiro para prender uma bandida muito esperta.
+        Um agente do FBI persegue o ladrão de arte mais procurado do mundo. Ele só não esperava ter seu alvo como
+        parceiro para prender uma bandida muito esperta.
       </span>
 
       <div class="movie-buttons">
-        <div class="watch-button"><mat-icon class="play_arrow" aria-hidden="false" aria-label="Play button">play_arrow</mat-icon>Assistir</div>
-        <div class="more-info"><mat-icon class="info" aria-hidden="false" aria-label="Play button">info</mat-icon>Mais informações</div>
+        <div class="watch-button">
+          <mat-icon class="play_arrow" aria-hidden="false" aria-label="Play button">play_arrow</mat-icon>Assistir
+        </div>
+        <div class="more-info">
+          <mat-icon class="info" aria-hidden="false" aria-label="Play button">info</mat-icon>Mais informações
+        </div>
       </div>
     </div>
   </div>
+
+  <div class="recommended">
+    <span>Populares na Netflix</span>
+    <div class="popular">
+      <div class="popular-cards" *ngFor="let item of userInfo.popular">
+        <app-movie-card [id]='item'></app-movie-card>
+      </div>
+    </div>
+
+    <span>Continuar assistindo como</span>
+    <div class="popular">
+      <div class="popular-cards" *ngFor="let item of userInfo.keepWatching">
+        <app-movie-card [id]='item'></app-movie-card>
+      </div>
+    </div>
+  </div>
+
 </div>
