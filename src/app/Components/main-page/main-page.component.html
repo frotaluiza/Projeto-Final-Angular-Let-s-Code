@@ -31,14 +31,14 @@
   <div class="recommended">
     <span>Populares na Netflix</span>
     <div class="popular">
-      <div class="popular-cards" *ngFor="let item of userInfo.popular">
+      <div class="popular-cards" *ngFor="let item of userData.popular">
         <app-movie-card [id]='item'></app-movie-card>
       </div>
     </div>
 
     <span>Continuar assistindo como</span>
     <div class="popular">
-      <div class="popular-cards" *ngFor="let item of userInfo.keepWatching">
+      <div class="popular-cards" *ngFor="let item of userData.keepWatching">
         <app-movie-card [id]='item'></app-movie-card>
       </div>
     </div>

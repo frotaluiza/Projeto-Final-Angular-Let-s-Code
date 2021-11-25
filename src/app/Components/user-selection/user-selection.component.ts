@@ -22,7 +22,7 @@ export class UserSelectionComponent implements OnInit {
 
   sendUserToMain(user: LoginUserInformation){
     console.log(user)
-    this.router.navigate(['main'])
+    this.router.navigate(['main'], {state: user})
   }
 
 }
