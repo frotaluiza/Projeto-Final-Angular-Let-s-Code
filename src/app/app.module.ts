@@ -15,6 +15,11 @@ import { NavbarComponent } from './Components/Shared/navbar/navbar.component';
 import { UserCardComponent } from './Components/Shared/user-card/user-card.component';
 import { NetflixLoaderComponent } from './Components/Shared/netflix-loader/netflix-loader.component';
 import { NoopAnimationsModule } from '@angular/platform-browser/animations';
+import { LoginPageComponent } from './Components/login-page/login-page.component';
+import { LoginFooterComponent } from './Components/login-page/login-footer/login-footer.component';
+import { LoginHeaderComponent } from './Components/login-page/login-header/login-header.component';
+import { LoginModalComponent } from './Components/login-page/login-modal/login-modal.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 
 
@@ -30,13 +35,18 @@ import { NoopAnimationsModule } from '@angular/platform-browser/animations';
     NavbarComponent,
     UserCardComponent,
     NetflixLoaderComponent,
+    LoginPageComponent,
+    LoginFooterComponent,
+    LoginHeaderComponent,
+    LoginModalComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
     MatIconModule,
-    NoopAnimationsModule
+    NoopAnimationsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

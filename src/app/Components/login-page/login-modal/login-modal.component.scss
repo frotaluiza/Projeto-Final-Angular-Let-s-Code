@@ -1,0 +1,81 @@
+
+.loginModal{
+    box-sizing: border-box;
+    position: relative;
+    left: 50%;
+    transform: translate(-50%);
+    width: 40vw;
+    min-width: 450px;
+    height: 90vh;
+    background-color: rgba(0, 0, 0, 0.75);
+    padding: 4% 2% 0 2%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+form{
+    font-family: Martel Sans;
+    height: 70%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+h1{
+    font-style: normal;
+    font-weight: 800;
+    font-size: 2em;
+    margin: 1%;
+    color: white;
+}
+input{
+    background-color: #333333;
+    border: none;
+    padding-left: 5%;
+    height: 10vh;
+    min-height: 8vh;
+    border-radius: 5px;
+    margin-bottom: 2%;
+}
+input:focus{
+    background-color: rgb(61, 61, 61);
+    outline:  none;
+}
+
+button{
+    color: #FFFFFF;
+    background-color: #E50914;
+    border: none;
+    border-radius: 5px;
+    height: 10vh;
+    min-height: 8vh;
+    margin: 5% 0 5% 0;
+    font-size: 0.9em;
+}
+button:hover{
+    background-color: #FD000D;
+}
+p{
+    font-size: 0.7em;
+    color: #8C8C8C;
+}
+a{
+    color: #0080FF;
+    text-decoration: none;
+}
+a:hover{
+    text-decoration: underline;
+}
+a:visited{
+    display: none;
+}
+
+@media only screen and (max-width: 739px){
+    .loginModal{
+        width: 100vw;
+        height: 80vh;
+    }
+    input{
+        height: 70%;
+    }
+    .loginModal{background-color: black;}
+}
