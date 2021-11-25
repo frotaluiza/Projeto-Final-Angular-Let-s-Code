@@ -13,7 +13,9 @@ import { LandingPageComponent } from './Components/landing-page/landing-page.com
 import { UserSelectionComponent } from './Components/user-selection/user-selection.component';
 import { NavbarComponent } from './Components/Shared/navbar/navbar.component';
 import { UserCardComponent } from './Components/Shared/user-card/user-card.component';
+import { NetflixLoaderComponent } from './Components/Shared/netflix-loader/netflix-loader.component';
 import { NoopAnimationsModule } from '@angular/platform-browser/animations';
+
 
 
 
@@ -27,7 +29,7 @@ import { NoopAnimationsModule } from '@angular/platform-browser/animations';
     UserSelectionComponent,
     NavbarComponent,
     UserCardComponent,
-
+    NetflixLoaderComponent,
   ],
   imports: [
     BrowserModule,
