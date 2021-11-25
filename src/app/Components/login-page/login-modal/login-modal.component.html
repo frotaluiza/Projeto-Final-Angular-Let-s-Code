@@ -1,0 +1,11 @@
+<div class="loginModal" [formGroup]="loginForm">
+    <form action="" method="post">
+        <h1>Entrar</h1>
+        <input formControlName="emailOrPhone" type="text" placeholder="Email ou número de telefone">
+        <span ngxErrors="emailOrPhone" >Erro</span>
+        <input formControlName="password" type="password" placeholder="Senha">
+        
+        <button href="#">Entrar</button>
+        <p>Esta página é protegida pelo Google reCAPTCHA para garantir que você não é um robô. <span><a href="#">Saiba mais.</a></span></p>
+    </form>
+</div>
