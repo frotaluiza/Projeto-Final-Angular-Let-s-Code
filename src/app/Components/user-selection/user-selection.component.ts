@@ -15,9 +15,7 @@ export class UserSelectionComponent implements OnInit {
   constructor(private router: Router, private api: ApiNetflixService) { }
 
   ngOnInit(): void {
-    this.api.postLoginNetflix('a', 'a').subscribe(a =>{
-      this.usersSelection = a.users
-    })
+    this.usersSelection = this.api.listOfUsers
   }
 
   sendUserToMain(user: LoginUserInformation){

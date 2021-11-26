@@ -55,6 +55,7 @@ export class LoginModalComponent implements OnInit {
     let userPassword = this.loginForm.get('password')!.value
     this.api.postLoginNetflix(userEmailOrPhone, userPassword).subscribe( result =>{
       localStorage.setItem('token', result.token)
+      this.api.listOfUsers = result.users
       this.route.navigate(['user-selection'])
     })
   }
