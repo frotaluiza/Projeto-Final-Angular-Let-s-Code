@@ -4,8 +4,8 @@ import { Component, NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { LandingPageComponent } from './Components/landing-page/landing-page.component';
 import { LoginPageComponent } from './Components/login-page/login-page.component';
-import { AuthGuard } from './Services/auth/auth.guard';
 import { ModalComponent } from './Components/modal/modal.component';
+import { AuthGuard } from './Services/auth/auth.guard';
 
 const routes: Routes = [
   { path: 'user-selection', component: UserSelectionComponent, canActivate: [AuthGuard] },

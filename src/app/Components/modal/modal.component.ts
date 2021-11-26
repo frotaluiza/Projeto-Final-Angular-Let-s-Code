@@ -12,6 +12,7 @@ export class ModalComponent {
   id: number = 0;
 
   public show = false;
+  loaderNetflix: boolean = true;
 
   movieData: ShowInformation = {
     cardImage: '',
@@ -33,7 +34,7 @@ export class ModalComponent {
 
     this.ServiceService.getShow(this.id).subscribe(x => {
       this.movieData = x;
-      console.log(x)
+      this.loaderNetflix = false
     })
   }
 
