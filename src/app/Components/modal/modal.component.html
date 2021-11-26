@@ -6,7 +6,8 @@
                     <button type="button" class="closeButton" aria-label="Close"> X </button>
                 </div>
                 <div class="imageContainer">
-                    <img class="movieImage" src={{movieData.backgroundImage}}>
+                    <div class="div-loader" *ngIf="loaderNetflix"><netflix-loader></netflix-loader></div>
+                    <img class="movieImage" *ngIf="!loaderNetflix" src={{movieData.backgroundImage}}>
                 </div>
             </div>
 
