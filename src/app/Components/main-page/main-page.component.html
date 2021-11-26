@@ -2,6 +2,42 @@
   <div class="main-movie">
     <img class="img-main" src="../../../assets/main-page/red-notice.png" />
     <div class="movie-data">
+      <nav>
+        <img src="../../../assets/netflix.png" alt="">
+        <!-- <div class="responsive">
+          <span class="sandwich">
+            Navegar
+            <mat-icon class="drop" aria-hidden="false" aria-label="Play button">arrow_drop_down</mat-icon>
+          </span>
+
+          <div class="drop-header-info">
+            <span>Início</span>
+            <span>Séries</span>
+            <span>Filmes</span>
+            <span>Bombando</span>
+            <span>Minha Lista</span>
+          </div>
+        </div> -->
+
+        <div class="dropdown">
+          <span class="dropbtn">Navegar<mat-icon class="drop" aria-hidden="false" aria-label="Play button">arrow_drop_down</mat-icon></span>
+          <div class="dropdown-content">
+            <a>Início</a>
+            <a>Séries</a>
+            <a>Filmes</a>
+            <a>Bombando</a>
+            <a>Minha Lista</a>
+          </div>
+        </div>
+
+        <div class="header-info">
+          <span><strong>Início</strong></span>
+          <span>Séries</span>
+          <span>Filmes</span>
+          <span>Bombando</span>
+          <span>Minha Lista</span>
+        </div>
+      </nav>
       <img class="movie-secondary" src="../../../assets/main-page/movie-title.png" />
 
       <div class="movie-ranking">
@@ -12,7 +48,7 @@
         <h2>Brasil: top 2 de hoje</h2>
       </div>
 
-      <span>
+      <span class="main-description">
         Um agente do FBI persegue o ladrão de arte mais procurado do mundo. Ele só não esperava ter seu alvo como
         parceiro para prender uma bandida muito esperta.
       </span>
@@ -33,7 +69,7 @@
         <app-movie-card [id]='item'></app-movie-card>
       </div>
     </div>
-
+    
     <span>Continuar assistindo como</span>
     <div class="popular">
       <div class="popular-cards" *ngFor="let item of userData.keepWatching">
