@@ -9,7 +9,7 @@ import { Router } from '@angular/router';
   styleUrls: ['./login-modal.component.scss']
 })
 export class LoginModalComponent implements OnInit {
-
+  showInfo: boolean = false;
   loginForm: FormGroup = new FormGroup({
     emailOrPhone: new FormControl('', Validators.required),
     password: new FormControl('', [Validators.required, Validators.minLength(4), Validators.maxLength(60)])
@@ -35,7 +35,13 @@ export class LoginModalComponent implements OnInit {
     return errors
   }
 
+  showsInfo(){
+    this.showInfo=true;
+  }
+
   constructor(private api: ApiNetflixService, private route: Router) { }
+
+  
 
   ngOnInit(): void {}
 

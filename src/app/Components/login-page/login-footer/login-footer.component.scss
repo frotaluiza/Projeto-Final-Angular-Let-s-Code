@@ -35,6 +35,8 @@ ul{
     justify-content: space-around;
     width: 30%;
 }
+
+
 p{
     margin-top: 6%;
     font-size: 0.9em;
@@ -44,6 +46,7 @@ li{
 }
 a{
    text-decoration: none;
+   color: #8C8C8C;
 }
 a:hover{
     text-decoration: underline;
@@ -51,6 +54,9 @@ a:hover{
 a:visited{
     color: #6F6F6F;
 }
+
+
+
 
 @media only screen and (max-width: 739px){
    footer{
@@ -62,3 +68,5 @@ a:visited{
        justify-content: start;
    }
 }
+
+
