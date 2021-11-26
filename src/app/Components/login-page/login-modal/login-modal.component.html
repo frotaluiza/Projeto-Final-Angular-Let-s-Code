@@ -1,11 +1,11 @@
-<div class="loginModal" [formGroup]="loginForm">
-    <form action="" method="post">
+<div class="loginModal">
+    <form action="" method="post" [formGroup]="loginForm">
         <h1>Entrar</h1>
         <input formControlName="emailOrPhone" type="text" placeholder="Email ou número de telefone">
-        <span ngxErrors="emailOrPhone" >Erro</span>
+        <span *ngIf="emailOrPhoneIsValid()">Informe um e-mail ou número de telefone válido</span>
         <input formControlName="password" type="password" placeholder="Senha">
-        
-        <button href="#">Entrar</button>
+        <span *ngIf="passwordIsValid()">A senha deve ter entre 4 e 60 caracteres.</span>   
+        <button type="button" (click)="sendFormLogin()">Entrar</button>
         <p>Esta página é protegida pelo Google reCAPTCHA para garantir que você não é um robô. <span><a href="#">Saiba mais.</a></span></p>
     </form>
 </div>
