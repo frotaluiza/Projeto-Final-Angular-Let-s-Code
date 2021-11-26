@@ -1,13 +1,18 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input, OnInit, ViewChild } from '@angular/core';
 import { ApiNetflixService } from 'src/app/Services/api-netflix.service';
+import { ModalComponent } from '../modal/modal.component';
 
 @Component({
   selector: 'app-movie-card',
   templateUrl: './movie-card.component.html',
   styleUrls: ['./movie-card.component.scss']
 })
+
 export class MovieCardComponent implements OnInit {
   @Input() id: number = 1;
+
+  @ViewChild("myModal")
+  modal: ModalComponent = new ModalComponent(this.serviceService);
 
   cardImage: string = "";
 
@@ -17,5 +22,9 @@ export class MovieCardComponent implements OnInit {
     this.serviceService.getShow(this.id).subscribe(x =>{  
       this.cardImage = x.cardImage;    
     })
+  }
+
+  ShowMovieModal(){
+    this.modal.showModal(this.id);
   }
 }

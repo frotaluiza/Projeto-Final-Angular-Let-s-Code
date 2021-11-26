@@ -1,0 +1,44 @@
+<ng-container *ngIf="show">
+    <div class="modalc" (mousedown)="closeModal($event)" #myModal>
+        <div class="modalcContent">
+            <div class="modalcHeader">
+                <div (click)="hideModal()" class="closeButtonContainer">
+                    <button type="button" class="closeButton" aria-label="Close"> X </button>
+                </div>
+                <div class="imageContainer">
+                    <img class="movieImage" src={{movieData.backgroundImage}}>
+                </div>
+            </div>
+
+            <div class="title-watch">
+                <div class="movieTittleContainer">
+                    <img class="movieTitleImage" src={{movieData.titleImage}}>
+                </div>
+                <div class="watchButtonContainer">
+                    <app-play-button></app-play-button>
+                </div>
+            </div>
+
+            <div class="data">
+                <section class="leftDescriptionElements">
+                    <div class="movieInformation">
+                        <h4 class="relavanceText" *ngIf="movieData.relevance">{{movieData.relevance}}% Relevante</h4>
+                        <h4 class="yearOfTheMovie">{{movieData.year}}</h4>
+                        <h4 class="ageClassification">{{movieData.minAge}}</h4>
+                        <h4 class="durationOfTheMovie" *ngIf="movieData.time">{{movieData.time}} min</h4>
+                    </div>
+                    <div class="movieDescription">
+                        <p>{{movieData.description}}</p>
+                    </div>
+                </section>
+                <section class="rightDescriptionElements">
+                    <p><span class="descriptionSpan">Elenco: </span> <span *ngFor="let item of movieData.cast">{{item}}, </span>mais</p>
+                    <p><span class="descriptionSpan">Gêneros: </span> <span *ngFor="let item of movieData.genre">{{item.charAt(0).toUpperCase() + item.slice(1)}}, </span></p>
+                    <p><span class="descriptionSpan">Cenas e momentos: </span> <span *ngFor="let item of movieData.scenes">{{item.charAt(0).toUpperCase() + item.slice(1)}}, </span></p>
+                </section>
+            </div>
+
+        </div>
+    </div>
+</ng-container>
+
