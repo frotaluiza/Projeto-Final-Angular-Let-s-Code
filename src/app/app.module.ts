@@ -20,7 +20,7 @@ import { LoginFooterComponent } from './Components/login-page/login-footer/login
 import { LoginHeaderComponent } from './Components/login-page/login-header/login-header.component';
 import { LoginModalComponent } from './Components/login-page/login-modal/login-modal.component';
 import { ReactiveFormsModule } from '@angular/forms';
-import { ModalComponent } from './Components/modal/modal.component';
+import { ModalComponent } from './Components/main-page/modal/modal.component';
 import { PlayButtonComponent } from './Components/Shared/play-button/play-button.component';
 
 

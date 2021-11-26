@@ -1,6 +1,6 @@
 import { Component, Input, OnInit, ViewChild } from '@angular/core';
 import { ApiNetflixService } from 'src/app/Services/api-netflix.service';
-import { ModalComponent } from '../modal/modal.component';
+import { ModalComponent } from '../main-page/modal/modal.component';
 
 @Component({
   selector: 'app-movie-card',
