@@ -8,7 +8,7 @@ import { UserChosen } from 'src/app/Services/endpoints-results';
   styleUrls: ['./main-page.component.scss']
 })
 export class MainPageComponent implements OnInit {
-  userInfo: number = 0;
+  userInfo: string = '';
 
   userData: UserChosen = {
     popular: [],
@@ -19,7 +19,8 @@ export class MainPageComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.userInfo = history.state.navigationId;
+    
+    this.userInfo = localStorage.getItem('id')!
 
     this.apiRequest.getUserChosen(this.userInfo).subscribe(x => 
       this.userData = x

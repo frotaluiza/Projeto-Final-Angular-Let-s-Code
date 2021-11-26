@@ -22,7 +22,7 @@ export class ApiNetflixService {
     return this.http.post<LoginResult>(this.urlApi + '/login', payload)
   }
 
-  getUserChosen(userId: number): Observable<UserChosen>{
+  getUserChosen(userId: string): Observable<UserChosen>{
     return this.http.get<UserChosen>(`${this.urlApi}/users/${userId}`)
   }
 
