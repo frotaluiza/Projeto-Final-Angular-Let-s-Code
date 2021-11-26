@@ -21,7 +21,7 @@ export class UserSelectionComponent implements OnInit {
   }
 
   sendUserToMain(user: LoginUserInformation){
-    console.log(user)
+    localStorage.setItem('id', user.id.toString())
     this.router.navigate(['main'], {state: user})
   }
 

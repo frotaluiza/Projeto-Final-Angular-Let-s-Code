@@ -4,13 +4,14 @@ import { Component, NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { LandingPageComponent } from './Components/landing-page/landing-page.component';
 import { LoginPageComponent } from './Components/login-page/login-page.component';
+import { AuthGuard } from './Services/auth/auth.guard';
 
 const routes: Routes = [
-  { path: 'user-selection', component: UserSelectionComponent },
-  { path: 'main', component: MainPageComponent },
+  { path: 'user-selection', component: UserSelectionComponent, canActivate: [AuthGuard] },
+  { path: 'main', component: MainPageComponent, canActivate: [AuthGuard] },
   { path: 'home', component: LandingPageComponent },
+  {path: 'login', component: LoginPageComponent},
   { path: '',   redirectTo: '/home', pathMatch: 'full' },
-  {path: 'login', component: LoginPageComponent}
 ];
 
 @NgModule({

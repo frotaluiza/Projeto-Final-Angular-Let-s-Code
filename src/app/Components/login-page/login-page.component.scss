@@ -1,6 +1,9 @@
 .loginPage{
     background-image: url(/assets/main-background.png);
 }
+simple-navbar{
+    position: absolute;
+}
 @media only screen and (max-width: 739px){
     .loginPage{
         background-image: none;
