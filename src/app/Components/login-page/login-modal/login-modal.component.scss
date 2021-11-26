@@ -44,6 +44,11 @@ input{
     border-radius: 5px;
     margin-top: 6%;
 }
+
+.input-error{
+    border-bottom: #b6661f solid 2px;
+}
+
 #emailOrPhone{
     margin-bottom: 3%;
 }
